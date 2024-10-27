@@ -4,7 +4,7 @@ const inputs = document.querySelectorAll('input');
 
 inputs.forEach((input) => {
   const newLabel = document.createElement('label');
-  const parentInputs = input.parentNode;
+
   const trueName = `${input.name.slice(0, 1).toUpperCase()}${input.name.slice(1)}`;
 
   newLabel.classList.add('field-label');
@@ -13,5 +13,4 @@ inputs.forEach((input) => {
 
   input.before(newLabel);
   input.placeholder = trueName.replace(/([A-Z])/g, ' $1').trim();
-  parentInputs.appendChild(newLabel);
 });
